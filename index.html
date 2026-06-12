@@ -203,9 +203,10 @@
   .video-wrap {
     position: relative;
     width: 100%;
-    padding-top: 56.25%;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
     background: #000;
+    -webkit-overflow-scrolling: touch;
   }
 
   .video-wrap iframe {
@@ -214,7 +215,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border: none;
+    border: 0;
     display: block;
   }
 
@@ -529,8 +530,12 @@
   <div class="video-wrap">
     <iframe
       src="https://drive.google.com/file/d/1lWTNzPmpA7u_cDzPpMIHAy6MSnWSYfNTZv7AwvKGjkg/preview"
-      allow="autoplay"
-      allowfullscreen>
+      allow="autoplay; fullscreen"
+      allowfullscreen
+      webkitallowfullscreen
+      mozallowfullscreen
+      frameborder="0"
+      scrolling="no">
     </iframe>
   </div>
 </div>
