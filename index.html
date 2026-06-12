@@ -189,18 +189,25 @@
   }
 
   /* ===== VIDEO ===== */
-  .video-wrap {
-    width: 100%;
-    border-radius: 10px;
+  .video-outer {
+    margin: 0 -1.2rem;
+    background: #000;
     overflow: hidden;
+  }
+
+  .video-wrap {
+    position: relative;
+    width: 100%;
+    padding-top: calc(100vw * 0.5625);
     background: #000;
   }
 
   .video-wrap iframe {
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
+    height: 100%;
     border: 0;
   }
 
@@ -512,16 +519,18 @@
 <div class="section" id="video">
   <div class="eyebrow">Study Video</div>
   <h2 class="section-title">勉強会 動画</h2>
-  <div class="video-wrap">
-    <iframe
-      src="https://drive.google.com/file/d/1lWTNzPmpA7u_cDzPpMIHAy6MSnWSYfNTZv7AwvKGjkg/preview"
-      allow="autoplay; fullscreen"
-      allowfullscreen
-      webkitallowfullscreen
-      mozallowfullscreen
-      frameborder="0"
-      scrolling="no">
-    </iframe>
+  <div class="video-outer">
+    <div class="video-wrap">
+      <iframe
+        src="https://drive.google.com/file/d/1lWTNzPmpA7u_cDzPpMIHAy6MSnWSYfNTZv7AwvKGjkg/preview"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+        webkitallowfullscreen
+        mozallowfullscreen
+        frameborder="0"
+        scrolling="no">
+      </iframe>
+    </div>
   </div>
 </div>
 
